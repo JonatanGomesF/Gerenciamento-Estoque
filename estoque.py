@@ -4,8 +4,8 @@ import mysql.connector
 conexao = mysql.connector.connect(
     host="localhost",
     user="root",  # Substitua pelo seu usuário do MySQL
-    password="",  # Substitua pela sua senha do MySQL
-    database="estoque_db"  # Nome do banco de dados
+    password="delta@1919",  # Substitua pela sua senha do MySQL
+    database="estoque_tintas"  # Nome do banco de dados
 )
 
 cursor = conexao.cursor()
@@ -23,8 +23,8 @@ def exibir_dados_tabela(tabela):
         print(f"Nenhum dado encontrado na tabela {tabela}.")
 
 # Exibindo dados das tabelas 'produtos', 'fornecedores' e 'movimentacoes'
-exibir_dados_tabela('produtos')
-exibir_dados_tabela('fornecedores')
+exibir_dados_tabela('produto')
+exibir_dados_tabela('fabricante')
 exibir_dados_tabela('movimentacoes')
 
 # Fechar a conexão
